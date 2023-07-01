@@ -24,7 +24,13 @@ public class BussinesAccount  extends Account {
 
     public void loan(double amount) {
         if (amount <= loanLimit) {
-            deposit(amount);
+            balance += amount - 10.0;
         }
+    }
+
+    @Override // indicar que é uma sobreposição de metodos
+    public void withdraw(double amount) { // operação de saque descontar
+        super.withdraw(amount);
+        balance -= 2.0;
     }
 }
