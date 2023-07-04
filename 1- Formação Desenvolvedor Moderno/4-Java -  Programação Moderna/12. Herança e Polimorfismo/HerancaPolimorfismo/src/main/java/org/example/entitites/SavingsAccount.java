@@ -1,6 +1,6 @@
 package org.example.entitites;
 
-public class SavingsAccount extends Account {
+public   class SavingsAccount extends Account {
 
     private Double interestRate;
 
@@ -22,12 +22,13 @@ public class SavingsAccount extends Account {
     }
     
     
-    public void updateBalance() {
+    public  void updateBalance() {
          balance += balance * interestRate;
     }
 
     @Override // indicar que é uma sobreposição de metodos
     public void  withdraw(double amount){ // operação de saque descontar
+        super.withdraw(amount);
         balance -= amount;
     }
 }
