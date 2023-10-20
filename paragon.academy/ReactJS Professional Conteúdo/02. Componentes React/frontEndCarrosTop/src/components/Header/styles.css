@@ -1,4 +1,13 @@
-.dsc-header {
-    background-color: var(--dsc-color-bg-secondary);
-    color: var(--dsc-color-font-primary);
-  }
+header {
+    padding: 0 20px;
+    background-color: var(--ct-color-bg-secondary);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+   color: var(--ct-color-font-tertiary);
+   font-size: 24px;
+
+}
