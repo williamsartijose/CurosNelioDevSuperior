@@ -24,7 +24,7 @@ border-right: none;
 
 .ct-search-bar-submit {
     background-color: var(--ct-color-bg-tertiary) ;
-    color: var(--ct-color-font-quarternary);
+    color: var(--ct-color-font-quaternary);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
