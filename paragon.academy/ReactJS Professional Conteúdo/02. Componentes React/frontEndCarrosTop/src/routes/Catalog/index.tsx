@@ -16,7 +16,6 @@ export default function Catalog () {
              <SearchBar/>
              </div>
 
-             
              <div className="ct-catalog-cards-container">
             <Card/>
             <Card/>

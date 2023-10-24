@@ -14,7 +14,7 @@ export default function Card() {
           nisi
         </i>
       </p>
-      <ButtonCard/>
+      <ButtonCard />
     </div>
   );
 }
