@@ -3,11 +3,14 @@
 :root {
   --ct-color-bg-primary: #FFFFFF;
   --ct-color-bg-secondary: #F78B00;
+  --ct-color-bg-tertiary:#00285F;
+
 
   --ct-color-font-primary:#000;
   --ct-color-font-secondary:#585858;
   --ct-color-font-tertiary:#00285F;
-  --ct-color-font-primary:#fff;
+  --ct-color-font-quarternary:#fff;
+  --ct-color-font-placeholder: #a7a7a7;
 
 }
 
