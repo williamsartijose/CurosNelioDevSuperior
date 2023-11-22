@@ -1,4 +1,11 @@
-const invoices = [
+interface Invoice {
+  name: string;
+  number: number;
+  amount: string;
+  due: string;
+}
+
+let invoices: Invoice[] = [
   {
     name: "Santa Monica",
     number: 1995,
@@ -31,10 +38,14 @@ const invoices = [
   },
 ];
 
-export function getInvoices() {
+export function getInvoices(): Invoice[] {
   return invoices;
 }
 
-export function getInvoice(number : any) {
+export function getInvoice(number: number): Invoice | undefined {
   return invoices.find((invoice) => invoice.number === number);
+}
+
+export function deleteInvoice(number: number): void {
+  invoices = invoices.filter((invoice) => invoice.number !== number);
 }
