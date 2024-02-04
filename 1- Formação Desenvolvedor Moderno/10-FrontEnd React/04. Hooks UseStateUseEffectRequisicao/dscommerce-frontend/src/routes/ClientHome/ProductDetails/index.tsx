@@ -16,7 +16,7 @@ export default function ProductDetails() {
 
   //o useEffect recebe 2 argumento 1ºArgumentoFunçao() =>  { }, 2ºArgumentoListaObjeto que ele vai observar[]
   useEffect(() => {
-    axios.get("http://localhost:8080/products/1")
+    axios.get(`http://localhost:8080/products/${params.productId}`)
     .then((response) => {
       console.log(response.data);
       setproduct(response.data);
