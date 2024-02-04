@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ProductDTO } from "../../../models/product.ts";
-import axios from "axios";
 
 export default function ProductDetails() {
   const params = useParams();
@@ -16,7 +15,7 @@ export default function ProductDetails() {
 
   //o useEffect recebe 2 argumento 1ºArgumentoFunçao() =>  { }, 2ºArgumentoListaObjeto que ele vai observar[]
   useEffect(() => {
-    axios.get(`http://localhost:8080/products/${params.productId}`)
+   productService.findById(Number(params.productId))
     .then((response) => {
       console.log(response.data);
       setproduct(response.data);
