@@ -1,0 +1,23 @@
+header {
+  background-color: var(--cgapi-color-bg-primary);
+  height: 62px;
+  display: flex;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--cgapi-color-font-primary);
+}
+
+@media(min-width: 768px) {
+  header {
+    padding: 0 40px;
+  }
+}

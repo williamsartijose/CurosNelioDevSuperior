@@ -1,0 +1,25 @@
+.cgapi-title {
+    margin: 27px 0;
+}
+
+.cgapi-title h2 {
+    font-size: 34px
+}
+
+.cgapi-title h3 {
+    font-size: 18px;
+    color: var(--cgapi-color-font-secundary);
+}
+
+@media (min-width:  576px) {
+
+    .cgapi-title h2 {
+        font-size: 48px
+    }
+    
+    .cgapi-title h3 {
+        font-size: 24px;
+        color: var(--cgapi-color-font-secundary);
+    }
+
+}
