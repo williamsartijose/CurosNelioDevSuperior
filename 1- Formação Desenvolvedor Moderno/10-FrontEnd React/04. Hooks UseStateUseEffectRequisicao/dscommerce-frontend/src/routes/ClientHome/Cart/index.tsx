@@ -1,6 +1,23 @@
 import "./styles.css";
-import computerImg from "../../../assets/computer.png";
+import { useEffect } from "react";
+import * as cartService from "../../../Services/cart-service";
+import { OrderDTO, OrderItemDTO } from "../../../models/order";
 
+const item1: OrderItemDTO = new OrderItemDTO(
+  4,
+  1,
+  "PC Gamer",
+  1200,
+  "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/4-big.jpg"
+);
+
+const item2: OrderItemDTO = new OrderItemDTO(
+  5,
+  2,
+  "Rails for Dummies",
+  100.99,
+  "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/5-big.jpg"
+);
 const cart = {
   items: [
     {
@@ -23,6 +40,13 @@ const cart = {
 };
 
 export default function Cart() {
+  useEffect(() => {
+    const cart: OrderDTO = new OrderDTO();
+    cart.items.push(item1);
+    cart.items.push(item2);
+
+    cartService.saveCart(cart);
+  }, []);
   return (
     <main>
       <section id="cart-container-section" className="dsc-container">
