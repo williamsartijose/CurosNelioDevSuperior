@@ -4,11 +4,6 @@
   color: var(--dsc-color-font-primary);
 }
 
-.dsc-search-bar button,
-.dsc-search-bar input {
-  border: 1px solid var(--dsc-color-card-border);
-}
-
 .dsc-search-bar input {
   width: calc(100% - 80px);
   border-left: none;
@@ -22,8 +17,12 @@
   outline: none;
 }
 
-.dsc-search-bar input::placeholder {
+.dsc-search-bar input::placeholder{
   color: var(--dsc-color-font-placeholder);
+}
+
+.dsc-search-bar button, .dsc-search-bar input {
+  border: 1px solid var(--dsc-color-card-boder);
 }
 
 .dsc-search-bar button {
