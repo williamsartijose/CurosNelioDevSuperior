@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import cartIcon from "../../assets/cart.svg";
+import CartIcon from "../CartIcon";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export default function HeaderClient() {
   return (
-    <>
+
       <header className="dsc-header-client">
         <nav className="dsc-container">
           <Link to="/">
@@ -12,12 +12,11 @@ export default function HeaderClient() {
           </Link>
           <div className="dsc-navbar-right">
             <div className="dsc-menu-items-container">
+            <Link to="/cart">
               <div className="dsc-menu-item">
-               <Link to="/cart">
-                  <img src={cartIcon} alt="Carrinho de compras" />
-               </Link>
-                
+               <CartIcon/>
               </div>
+              </Link>
             </div>
             <Link to="/login">
                Entrar
@@ -25,6 +24,5 @@ export default function HeaderClient() {
           </div>
         </nav>
       </header>
-    </>
   );
 }
