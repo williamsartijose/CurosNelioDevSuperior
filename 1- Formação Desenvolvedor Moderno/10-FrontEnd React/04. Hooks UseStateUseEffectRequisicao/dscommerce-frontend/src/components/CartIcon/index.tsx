@@ -1,14 +1,20 @@
 import "./styles.css";
 import cartIcon from "../../assets/cart.svg";
-import * as cartService from "../../Services/cart-service"
-import { useState } from "react";
+import { useContext, useState } from "react";
+import * as cartService from '../../services/cart-service';
+import { ContexCartCount } from "../../utils/context-cart";
 
 export default function CartIcon() {
-    const [cart, setCart] = useState(cartService.getCart());
+
+    const {contexCartCount } = useContext(ContexCartCount);
+
   return (
     <>
       <img src={cartIcon} alt="Carrinho de compras" />
-        <div className="dsc-cart-count">{cart.items.length}</div>
+      {
+        contexCartCount > 0 &&
+        <div className="dsc-cart-count">{contexCartCount}</div>
+      }
       
     </>
   );
